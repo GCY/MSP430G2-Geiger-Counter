@@ -20,7 +20,7 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 ### Key Component List
 - Geiger-Muller Tube - J321βγ, M4011, SBM-20...etc
 - MSP430G2433 or MSP430G2553
-- TLC555 (CMOS 555)
+- TLC555 (CMOS 555, DIP or SMD)
 - TMP35 (Operate Voltage 3.3v)
 
 ### Configure
