@@ -21,6 +21,8 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 - TLC555 (CMOS 555)
 - TMP35 (Operate Voltage 3.3v)
 
+### Configure
+
 ## Firmware
 
 ### Build and Burn The .hex file
