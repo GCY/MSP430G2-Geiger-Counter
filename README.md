@@ -1,6 +1,6 @@
 # MSP430G2-Geiger-Counter
 
-This device is Geiger-Muller Counter ,and Random Number Generator(RNG) uses radioactive isotopes.
+This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses radioactive isotopes.
 
 ## Features
 
@@ -16,10 +16,10 @@ This device is Geiger-Muller Counter ,and Random Number Generator(RNG) uses radi
 ## Hardware
 
 ### Key Component List
-- Geiger-Muller Tube
+- Geiger-Muller Tube - J321βγ, M4011, SBM-20...etc
 - MSP430G2433 or MSP430G2553
-- TLC555
-- TMP35
+- TLC555 (CMOS 555)
+- TMP35 (Operate Voltage 3.3v)
 
 ## Firmware
 
