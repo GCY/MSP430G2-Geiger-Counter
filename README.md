@@ -23,7 +23,7 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 
 ## Firmware
 
-### Build and Burn The
+### Build and Burn The .hex file
 - Install Energia 1.6.10E18
 - Select board -> MSP430G2553
 - Open MSP430Geiger.ino
