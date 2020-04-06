@@ -12,6 +12,8 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 
 ![alt text](https://github.com/GCY/MSP430G2-Geiger-Counter/blob/master/res/20200325_024958.jpg?raw=true)
 
+![alt text](https://github.com/GCY/MSP430G2-Geiger-Counter/blob/master/res/20200406_174812.jpg?raw=true)
+
 
 ## Hardware
 
