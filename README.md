@@ -25,6 +25,7 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 
 ### Build and Burn The
 - Install Energia 1.6.10E18
+- Select board -> MSP430G2553
 - Open MSP430Geiger.ino
 - Upload
 
