@@ -27,7 +27,7 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 
 - J1 - CMOS555 4.2v power supply.
 - VR1 - Adjust High-Voltage output 180v~500v.
-- IC1 - if this is use LDO, your temperature sensor operate voltage = 3v(TMP35), use forward voltage operate voltage = 4v(LM35).
+- IC1 - if this is use LDO, your temperature sensor power supply voltage = 3v(TMP35), use forward voltage(VF) power supply voltage = 4v(LM35).
 
 ## Firmware
 
