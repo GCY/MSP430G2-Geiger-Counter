@@ -25,6 +25,10 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 
 ### Configure
 
+J1 - CMOS555 operate voltage 4.2v supply.
+VR1 - Adjust High-Voltage output 180v~500v.
+IC1 - if this is use LDO, your temperature sensor operate voltage = 3v(TMP35), use forward voltage operate voltage = 4v(LM35).
+
 ## Firmware
 
 ### Build and Burn The .hex file
