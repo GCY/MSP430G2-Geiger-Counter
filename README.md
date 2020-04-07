@@ -91,7 +91,7 @@ if(random_number_size == 8){
 
 ## Reference
 
-- DIYGeiger https://sites.google.com/site/diygeigercounter/
+- [DIYGeiger](https://sites.google.com/site/diygeigercounter)
 
 
 LICENSE
