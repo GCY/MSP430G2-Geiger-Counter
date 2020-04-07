@@ -39,8 +39,14 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 
 ### Key Parameters
 
+### Radiation Measurements
+
+
+### Geiger Counter TRNG Algorithm
+
 ## Reference
 
+- DIYGeiger https://sites.google.com/site/diygeigercounter/
 
 
 LICENSE
