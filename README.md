@@ -29,6 +29,7 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 - J1 - CMOS555 4.2v power supply.
 - VR1 - Adjust High-Voltage output 180v~500v.
 - IC1 - if this is use LDO, your temperature sensor power supply voltage = 3v(TMP35), use forward voltage(VF) power supply voltage = 4v(LM35).
+
 </br>
 
 ![alt text](https://github.com/GCY/MSP430G2-Geiger-Counter/blob/master/res/ldo%20replace%20to%20diode.png?raw=true)
@@ -39,7 +40,9 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 - Install Energia 1.6.10E18
 - Select board -> MSP430G2553
 - Open MSP430Geiger.ino
+- Connect Debugger BSL to MSP430Geiger
 - Upload
+- Done
 
 ### Key Parameters
 
