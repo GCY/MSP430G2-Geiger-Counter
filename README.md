@@ -1,6 +1,6 @@
 # MSP430G2-Geiger-Counter
 
-This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses radioactive isotopes.
+This device is Geiger-Muller Counter ,and True Random Number Generator(TRNG) uses radioactive isotopes.
 
 ## Features
 
@@ -50,6 +50,31 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 
 
 ### Geiger Counter TRNG Algorithm
+
+First, calculate pulse-to-pulse time period of every three counts, if (C2-C1) > (C3-C2) output current bit 0 value, (C2-C1) <= (C3-C2) output current bit 1 value, this process is physically random.
+
+<pre><code>
+/* pseudo code */
+pulse_diff_time_array[3] = {C1,C2,C3};
+
+T1 = C2-C1;
+T2 = C3-C2;
+
+if(T1 > T2){
+  random_number |= (0 <<= random_number_size);
+}
+if(T1 <= T2){
+  random_number |= (1 <<= random_number_size);
+}
+++random_number_size;
+
+if(random_number_size == 8){
+  Serial Output random_number;
+  random_number = 0;
+  random_number_size = 0;
+}
+
+</code></pre>
 
 ## Reference
 
