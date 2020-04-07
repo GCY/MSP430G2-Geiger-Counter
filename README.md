@@ -65,7 +65,7 @@ const float ADC2VOL = (3.3f/1024.0f);  // 3.3v/10bit
 ### Radiation Measurements
 If detected ionizing radiation MSP430G4 P1_4 interrupt count += 1.
 </br>
-this period for count-per-minute calculate, CPM = 60sec/20sec * count;
+CPM_TIME_PERIOD 20-second sampling-rate for count-per-minute calculate, CPM = 60sec/20sec * count;
 <pre><code>
 const unsigned long CPM_TIME_PERIOD = 20;
 </code></pre>
