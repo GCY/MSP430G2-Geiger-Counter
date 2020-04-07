@@ -30,15 +30,15 @@ static unsigned long sampling_update_time = 0;
 double temp_sum = 0;
 static unsigned int sampling_count = 0;
 
-uint8_t mode = 0;
-bool switch_flag = false;
 enum{
   GEIGER_COUNTER_MODE,
   TEMPERATURE_MODE,
   RANDON_NUMBER_GENERATOR_MODE
 };
+uint8_t mode = GEIGER_COUNTER_MODE;
+bool switch_flag = false;
 
-const float CPM2uSv = 153.8f;
+const float CPM2uSv = 153.8f; //CPM to uSv/h conversion rate
 
 static unsigned long usv_update_time = 0;
 static unsigned long count = 0;
