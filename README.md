@@ -1,6 +1,10 @@
 # MSP430G2-Geiger-Counter
 
 This device is Geiger-Muller Counter ,and True Random Number Generator(TRNG) uses radioactive isotopes.
+</br>
+
+https://www.youtube.com/watch?v=-gwNQ9MdoDw
+[![Audi R8](http://img.youtube.com/vi/v=-gwNQ9MdoDw/0.jpg)](https://youtu.be/v=-gwNQ9MdoDw)
 
 ## Features
 
