@@ -60,7 +60,18 @@ const float ADC2VOL = (3.3f/1024.0f);  // 3.3v/10bit
 </code></pre>
 
 ### Radiation Measurements
-
+If detecting ionizing radiation MSP430G4 P1_4 interrupt count += 1.
+</br>
+this period for count-per-minute calculate, CPM = 60sec/20sec * count;
+<pre><code>
+const unsigned long CPM_TIME_PERIOD = 20;
+</code></pre>
+Next, converting CPM to a Dose Unit.
+<pre><code>
+uSv/h = CPM / CPM2uSv(153.8);
+mSv/Y = uSv/h * 24(Day-Hour) * 365(Year-Day)
+</code></pre>
+The worldwide average natural dose to humans is about 2.4 mSv/Y
 
 ### Geiger Counter TRNG Algorithm
 
@@ -94,10 +105,12 @@ if(random_number_size == 8){
 
 ![alt text](https://github.com/GCY/MSP430G2-Geiger-Counter/blob/master/res/histogram.png?raw=true)
 
+### Software
 
 ## Reference
 
 - [DIYGeiger](https://sites.google.com/site/diygeigercounter)
+- [Geiger Counter WiKi](https://en.wikipedia.org/wiki/Geiger_counter)
 
 
 LICENSE
