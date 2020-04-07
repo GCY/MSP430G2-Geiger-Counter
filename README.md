@@ -1,6 +1,6 @@
 # MSP430G2-Geiger-Counter
 
-This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses radioactive isotopes.
+This device is Geiger-Muller Counter ,and True Random Number Generator(TRNG) uses radioactive isotopes.
 
 ## Features
 
@@ -22,12 +22,17 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 - MSP430G2433 or MSP430G2553
 - TLC555 (CMOS 555, DIP or SMD)
 - TMP35 (Operate Voltage 3.3v)
+- Fuse Holder on PCB for T5x20 Size * 2
 
 ### Configure
 
 - J1 - CMOS555 4.2v power supply.
 - VR1 - Adjust High-Voltage output 180v~500v.
-- IC1 - if this is use LDO, your temperature sensor power supply voltage = 3v(TMP35), use forward voltage(VF) power supply voltage = 4v(LM35).
+- IC1 - if this is use LDO, your temperature sensor power supply voltage = 2.9v-3v(TMP35), use forward voltage(VF) 0.5v diode,  temperature sensor power supply voltage = 3.7v-4v(LM35).
+
+</br>
+
+![alt text](https://github.com/GCY/MSP430G2-Geiger-Counter/blob/master/res/ldo%20replace%20to%20diode.png?raw=true)
 
 ## Firmware
 
@@ -35,18 +40,58 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(RNG) uses
 - Install Energia 1.6.10E18
 - Select board -> MSP430G2553
 - Open MSP430Geiger.ino
+- Connect Debugger BSL to MSP430Geiger
 - Upload
+- Done
 
 ### Key Parameters
+
+How to calculate calibration factor? Reference [Method1,2,3,4](https://sites.google.com/site/diygeigercounter/technical/gm-tubes-supported?authuser=0 ) (SBM-20 = 175, M4011 or J321βγ = 153.8)
+</br>
+<pre><code>
+const float CPM2uSv = 153.8f; //CPM to uSv/h conversion rate
+</code></pre>
+
+</br>
+R19, R20 is 10k and 33k, LM321 gain = 1+(33k/10k) = 4.3, so original temperature voltage: temp_vol = (ADC/4.3) * (3.3/1024), every 10mV(TMP35, LM35) = 1°C, temperature = temp_vol / 0.01 °C.
+<pre><code>
+const float TEMPERATURE_GAIN = 1.0f + 3.3f; // 1+ (33k/10k)
+const float ADC2VOL = (3.3f/1024.0f);  // 3.3v/10bit
+</code></pre>
 
 ### Radiation Measurements
 
 
 ### Geiger Counter TRNG Algorithm
 
+Calculate pulse-to-pulse time period of every three counts, if (C2-C1) > (C3-C2) output current bit 0 value, (C2-C1) <= (C3-C2) output current bit 1 value, this process is physically random.
+
+<pre><code>
+/* pseudo code */
+pulse_diff_time_array[3] = {C1,C2,C3};
+
+T1 = C2-C1;
+T2 = C3-C2;
+
+if(T1 > T2){
+  random_number |= (0 <<= random_number_size);
+}
+if(T1 <= T2){
+  random_number |= (1 <<= random_number_size);
+}
+++random_number_size;
+
+if(random_number_size == 8){
+  Serial Output random_number;
+  random_number = 0;
+  random_number_size = 0;
+}
+
+</code></pre>
+
 ## Reference
 
-- DIYGeiger https://sites.google.com/site/diygeigercounter/
+- [DIYGeiger](https://sites.google.com/site/diygeigercounter)
 
 
 LICENSE
