@@ -88,6 +88,7 @@ if(random_number_size == 8){
 }
 
 </code></pre>
+</br>
 
 ![alt text](https://github.com/GCY/MSP430G2-Geiger-Counter/blob/master/res/histogram.png?raw=true)
 
