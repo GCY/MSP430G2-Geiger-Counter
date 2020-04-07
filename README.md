@@ -3,10 +3,6 @@
 This device is Geiger-Muller Counter ,and True Random Number Generator(TRNG) uses radioactive isotopes.
 </br>
 
-https://www.youtube.com/watch?v=-gwNQ9MdoDw
-</br>
-
-
 [![Audi R8](http://img.youtube.com/vi/-gwNQ9MdoDw/0.jpg)](https://youtu.be/-gwNQ9MdoDw)
 
 ## Features
