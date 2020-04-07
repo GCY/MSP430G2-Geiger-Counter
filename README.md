@@ -46,12 +46,22 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(TRNG) use
 
 ### Key Parameters
 
+How to calculate calibration factor? Reference Method1,2,3,4 : https://sites.google.com/site/diygeigercounter/technical/gm-tubes-supported?authuser=0 
+</br>
+<pre><code>
+const float CPM2uSv = 153.8f; //CPM to uSv/h conversion rate
+</code></pre>
+
+<pre><code>
+const float TEMPERATURE_GAIN = 1.0f + 3.3f; // 1+ (33k/10k)
+</code></pre>
+
 ### Radiation Measurements
 
 
 ### Geiger Counter TRNG Algorithm
 
-First, calculate pulse-to-pulse time period of every three counts, if (C2-C1) > (C3-C2) output current bit 0 value, (C2-C1) <= (C3-C2) output current bit 1 value, this process is physically random.
+Calculate pulse-to-pulse time period of every three counts, if (C2-C1) > (C3-C2) output current bit 0 value, (C2-C1) <= (C3-C2) output current bit 1 value, this process is physically random.
 
 <pre><code>
 /* pseudo code */
