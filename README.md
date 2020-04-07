@@ -74,7 +74,7 @@ Next, converting CPM to a Dose Unit.
 uSv/h = CPM / CPM2uSv(153.8);
 mSv/Y = uSv/h * 24(Day-Hour) * 365(Year-Day)
 </code></pre>
-The worldwide average natural dose to humans is about 2.4 mSv/Y
+The worldwide average natural dose to humans is about 2.4 mSv/Y.
 
 ### Geiger Counter TRNG Algorithm
 
@@ -108,7 +108,7 @@ if(random_number_size == 8){
 
 ![alt text](https://github.com/GCY/MSP430G2-Geiger-Counter/blob/master/res/histogram.png?raw=true)
 
-### Software
+### Encrypt Software Demo
 
 ## Reference
 
