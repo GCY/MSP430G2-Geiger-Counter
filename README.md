@@ -46,7 +46,7 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(TRNG) use
 
 ### Key Parameters
 
-How to calculate calibration factor? Reference Method1,2,3,4 : https://sites.google.com/site/diygeigercounter/technical/gm-tubes-supported?authuser=0 
+How to calculate calibration factor? Reference [Method1,2,3,4](https://sites.google.com/site/diygeigercounter/technical/gm-tubes-supported?authuser=0 )
 </br>
 <pre><code>
 const float CPM2uSv = 153.8f; //CPM to uSv/h conversion rate
