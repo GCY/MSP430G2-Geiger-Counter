@@ -52,8 +52,11 @@ How to calculate calibration factor? Reference [Method1,2,3,4](https://sites.goo
 const float CPM2uSv = 153.8f; //CPM to uSv/h conversion rate
 </code></pre>
 
+</br>
+R19, R20 is 10k and 33k, LM321 gain = 1+(33k/10k) = 4.3, so original temperature voltage: temp_vol = (ADC/4.3) * (3.3/1024), every 10mV(TMP35, LM35) = 1°C, temperature = temp_vol / 0.01 °C.
 <pre><code>
 const float TEMPERATURE_GAIN = 1.0f + 3.3f; // 1+ (33k/10k)
+const float ADC2VOL = (3.3f/1024.0f);  // 3.3v/10bit
 </code></pre>
 
 ### Radiation Measurements
