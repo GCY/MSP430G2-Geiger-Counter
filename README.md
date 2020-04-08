@@ -37,6 +37,14 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(TRNG) use
 
 ![alt text](https://github.com/GCY/MSP430G2-Geiger-Counter/blob/master/res/ldo%20replace%20to%20diode.png?raw=true)
 
+### Light Sensitive Problem (J321βγ, M4011)
+[Reference This Discussion](http://www.gqelectronicsllc.com/forum/topic.asp?TOPIC_ID=4540)
+
+</br>
+
+For J321βγ, it doesn't happen often, i guess that's about wavelength of light.
+
+
 ## Firmware
 
 ### Build and Burn The .hex file
