@@ -30,7 +30,7 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(TRNG) use
 ### Configure
 
 - J1 - CMOS555 4.2v power supply.
-- VR1 - Adjust High-Voltage output 180v~500v.
+- VR1 - Adjust High-Voltage output 180VDC~500VDC, DMM setting 1000VDC internal resistance = 10M, if you measure tube voltage around 250VDC you're doing fine(real 400VDC).
 - IC1 - if this is use LDO, your temperature sensor power supply voltage = 2.9v-3v(TMP35), use forward voltage(VF) 0.5v diode,  temperature sensor power supply voltage = 3.7v-4v(LM35).
 
 </br>
