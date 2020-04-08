@@ -114,7 +114,7 @@ if(random_number_size == 8){
 
 - [DIYGeiger](https://sites.google.com/site/diygeigercounter)
 - [Geiger Counter WiKi](https://en.wikipedia.org/wiki/Geiger_counter)
-
+- [Hardware Random Number Generator](https://en.wikipedia.org/wiki/Hardware_random_number_generator)
 
 LICENSE
 -------
