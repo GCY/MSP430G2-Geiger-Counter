@@ -42,7 +42,7 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(TRNG) use
 
 </br>
 
-For J321βγ, it doesn't happen often, i guess that's about wavelength of light.
+For J321βγ, it doesn't happen often, I guess that's about wavelength of light.
 
 
 ## Firmware
