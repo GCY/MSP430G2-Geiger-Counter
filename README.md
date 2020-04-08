@@ -11,9 +11,12 @@ This device is Geiger-Muller Counter ,and True Random Number Generator(TRNG) use
 - [x] Temperature - degree Celsius (°C)
 - [x] True Random Number Generator - Serial Port Output 8bit TRNG
 
+
 ![alt text](https://github.com/GCY/MSP430G2-Geiger-Counter/blob/master/res/20200325_024932.jpg?raw=true)
 
+
 ![alt text](https://github.com/GCY/MSP430G2-Geiger-Counter/blob/master/res/20200325_024958.jpg?raw=true)
+
 
 ![alt text](https://github.com/GCY/MSP430G2-Geiger-Counter/blob/master/res/20200406_174812.jpg?raw=true)
 
