@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -14402,6 +14402,7 @@ Source: http://cache.national.com/ds/LM/LM321.pdf</description>
 <part name="VDD17" library="supply1" deviceset="VDD" device=""/>
 <part name="GND28" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="R21" library="SparkFun-Resistors" deviceset="0.22OHM1/4W1%(0805)" device="" value="0"/>
+<part name="C13" library="SparkFun-Capacitors" deviceset="0.1UF-25V(+80/-20%)(0603)" device="" value="10uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -14713,6 +14714,7 @@ Source: http://cache.national.com/ds/LM/LM321.pdf</description>
 <instance part="VDD17" gate="G$1" x="57.15" y="74.93"/>
 <instance part="GND28" gate="1" x="57.15" y="64.77"/>
 <instance part="R21" gate="G$1" x="180.34" y="71.12" rot="R180"/>
+<instance part="C13" gate="G$1" x="127" y="144.78"/>
 </instances>
 <busses>
 </busses>
@@ -14736,6 +14738,8 @@ Source: http://cache.national.com/ds/LM/LM321.pdf</description>
 <wire x1="104.14" y1="142.24" x2="116.84" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="91.44" y1="142.24" x2="104.14" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="C13" gate="G$1" pin="2"/>
+<wire x1="116.84" y1="142.24" x2="127" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="20"/>
@@ -14808,6 +14812,8 @@ Source: http://cache.national.com/ds/LM/LM321.pdf</description>
 <junction x="116.84" y="149.86"/>
 <pinref part="IC1" gate="G$1" pin="OUT@1"/>
 <wire x1="111.76" y1="147.32" x2="111.76" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="C13" gate="G$1" pin="1"/>
+<wire x1="116.84" y1="149.86" x2="127" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="1"/>

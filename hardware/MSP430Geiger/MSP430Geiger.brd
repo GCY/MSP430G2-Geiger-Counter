@@ -1543,6 +1543,9 @@ design rules under a new name.</description>
 <element name="R21" library="SparkFun-Resistors" package="0805" value="0" x="21.95" y="32.65" rot="R180">
 <attribute name="PROD_ID" value="RES-09883" x="21.95" y="32.65" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
+<element name="C13" library="SparkFun-Capacitors" package="0603-CAP" value="10uF" x="4.2" y="27.6">
+<attribute name="PROD_ID" value="CAP-00810" x="4.2" y="27.6" size="1.778" layer="27" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -1865,6 +1868,9 @@ design rules under a new name.</description>
 <wire x1="49.5" y1="26.2" x2="56.6" y2="26.2" width="0.254" layer="1"/>
 <wire x1="56.6" y1="26.2" x2="56.75" y2="26.05" width="0.254" layer="1"/>
 <wire x1="49.1" y1="23.556" x2="49.1" y2="25.8" width="0.254" layer="1"/>
+<contactref element="C13" pad="2"/>
+<wire x1="8.04" y1="27.538" x2="5.112" y2="27.538" width="0.3048" layer="1"/>
+<wire x1="5.112" y1="27.538" x2="5.05" y2="27.6" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$58">
 <contactref element="U$6" pad="2"/>
@@ -2216,6 +2222,9 @@ design rules under a new name.</description>
 <via x="21" y="37.5" extent="1-16" drill="0.6096"/>
 <wire x1="46.5" y1="52.5" x2="46.5" y2="59.75" width="0.254" layer="16"/>
 <via x="46.5" y="52.5" extent="1-16" drill="0.6096"/>
+<contactref element="C13" pad="1"/>
+<wire x1="3.27" y1="34.11" x2="3.27" y2="27.68" width="0.3048" layer="1"/>
+<wire x1="3.27" y1="27.68" x2="3.35" y2="27.6" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$6">
 <contactref element="LED" pad="A"/>
