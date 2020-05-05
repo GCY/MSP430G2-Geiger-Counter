@@ -132,7 +132,7 @@ LICENSE
 
 MIT License
 
-Copyright (c) 2020 Tony Guo
+Copyright (c) 2020 Tony Guo https://github.com/GCY
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
