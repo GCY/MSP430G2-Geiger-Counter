@@ -38,13 +38,17 @@ enum{
 uint8_t mode = GEIGER_COUNTER_MODE;
 bool switch_flag = false;
 
-const float CPM2uSv = 153.8f; //CPM to uSv/h conversion rate
+//const float CPM2uSv = 175.0f; //CPM to uSv/h conversion rate of SBM-20
+const float CPM2uSv = 153.8f; //CPM to uSv/h conversion rate of M4011
 
 static unsigned long usv_update_time = 0;
 static unsigned long count = 0;
 
 const unsigned long CLICK_TIME_PERIOD = 900;  // us, Geiger Tube Dead Time
 static unsigned long click_time = 0;
+
+const unsigned long DEAD_ZONE_PERIOD = 200;  // us, Geiger Tube Dead Zone
+static unsigned long dead_zone_time = 0;
 
 static bool count_flag = false;
 
@@ -241,14 +245,16 @@ void setup() {
   usv_update_time = micros();
   cps_update_time = micros();
   click_time = micros();
+  dead_zone_time = micros();
 
 }
 
 void loop() {
   
-  if(count_flag){
+  if(count_flag && ((micros() - dead_zone_time) > DEAD_ZONE_PERIOD) ){
     count_flag = false;
     click_time = micros();
+    dead_zone_time = micros();
     attachInterrupt(GEIGER_INT,GeigerDetected,FALLING);
   }
   
